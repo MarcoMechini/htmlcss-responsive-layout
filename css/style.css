@@ -12,22 +12,29 @@ img {
 XXXGENERALXXX
 XXXXXXXXXXXX*/
 
+body {
+    background-color: #f6f5f3;
+    font-family: Montserrat, 'Helvetica Neue', sans-serif;
+}
+
+li {
+    list-style: none;
+}
 
 /*XXXXXXXXXXX
 XXXXHEADERXXX
 XXXXXXXXXXX*/
 
-/* - Il font utilizzato per il titolo è: 'Nerko One', cursive;
-- Il font per il resto della pagina è: Montserrat, 'Helvetica Neue', sans-serif; */
-
-
 header {
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 40px;
+    height: 80px;
+    background-color: #fff;
     color: #ff9614;
     font-family: 'Nerko One', cursive;
     font-size: 3rem;
-    background-color: #fff;
     display: flex;
     justify-content: center;
 }
@@ -39,18 +46,103 @@ XXXXXXXXXXXX*/
 
 
 /*XXXXXXXXXXX
+XXXSECTIONXXX
+XXXXXXXXXXXX*/
+
+.section {
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hero-section {
+    padding-top: 80px;
+    box-shadow: 0 5px 10px lightgray;
+}
+
+.title h3 {
+    color: blue;
+    font-size: 1.8rem;
+}
+
+.title>div {
+    color: gray;
+    padding: 10px 0;
+}
+
+.title h3>span {
+    display: none;
+}
+
+.video-container {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.description {
+    padding: 2em;
+    font-size: 1.2rem;
+}
+
+.description h4 {
+    font-size: 1.6rem;
+}
+
+.description h4 {
+    padding: 1em 0;
+}
+
+.description li {
+    padding: 0.5em 0;
+}
+
+/*XXXXXXXXXXX
 XXXXFOOTERXXX
 XXXXXXXXXXX*/
 
 /* TABLET */
 @media screen and (min-width: 768px) {
+
+    /* HEADER */
     header {
         justify-content: flex-start;
     }
+
+    /* SECTION */
+    .title h3>span {
+        display: inline-block;
+    }
+
+    .description ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .description ul li {
+        width: calc(100% /3);
+    }
+
 }
 
 /* DESKTOP */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    .video-container {
+        display: flex;
+    }
+
+    .video-container img {
+        width: 70%;
+    }
+
+    .video-container div {
+        width: 30%;
+    }
+
+    .description ul li {
+        width: 100%;
+    }
+
+}
 
 /* LARGE MOBILE */
 /* @media screen and (min-width: 576px) {} */
