@@ -21,6 +21,10 @@ li {
     list-style: none;
 }
 
+.shadow {
+    box-shadow: 0 5px 10px lightgray;
+}
+
 /*XXXXXXXXXXX
 XXXXHEADERXXX
 XXXXXXXXXXX*/
@@ -55,9 +59,12 @@ XXXXXXXXXXXX*/
     margin: 0 auto;
 }
 
+/*XXXXXXXXXXX
+XXXXVIDEOXXXX
+XXXXXXXXXXXX*/
+
 .hero-section {
     padding-top: 80px;
-    box-shadow: 0 5px 10px lightgray;
 }
 
 .title h3 {
@@ -97,6 +104,30 @@ XXXXXXXXXXXX*/
 }
 
 /*XXXXXXXXXXX
+XXXXXICONXXXX
+XXXXXXXXXXXX*/
+
+.icon-section {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-section .card-icon {
+    text-decoration: none;
+    color: #000;
+    padding: 4px 8px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.icon-section .card-icon span {
+    display: none;
+}
+
+/* DISPLAY NONE IN SPAN */
+
+/*XXXXXXXXXXX
 XXXXFOOTERXXX
 XXXXXXXXXXX*/
 
@@ -122,6 +153,14 @@ XXXXXXXXXXX*/
         width: calc(100% /3);
     }
 
+    /* ICON SECTION */
+
+    .icon-section .card-icon {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
 }
 
 /* DESKTOP */
@@ -140,6 +179,11 @@ XXXXXXXXXXX*/
 
     .description ul li {
         width: 100%;
+    }
+
+    .icon-section .card-icon span {
+        padding-left: 4px;
+        display: inline-block;
     }
 
 }
