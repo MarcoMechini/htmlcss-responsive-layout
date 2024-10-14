@@ -108,9 +108,10 @@ XXXXXICONXXXX
 XXXXXXXXXXXX*/
 
 .icon-section {
-    padding: 1em 0;
+    padding: 1em 0 3em;
     display: flex;
     justify-content: space-between;
+
 }
 
 .icon-section .card-icon {
@@ -125,7 +126,44 @@ XXXXXXXXXXXX*/
     display: none;
 }
 
-/* DISPLAY NONE IN SPAN */
+/*XXXXXXXXXXX
+XXXXBANNERXXX
+XXXXXXXXXXXX*/
+
+.banner-img {
+    background-image: url(../img/banner.png);
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+/*XXXXXXXXXXX
+PRESENTATION
+XXXXXXXXXXX*/
+
+.presentation {
+    padding: 16px 0;
+}
+
+hr {
+    width: 20%;
+    border-top: 1px solid #f6a246;
+    margin: 10px 0;
+}
+
+.presentation div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation div img {
+    width: 60%;
+}
+
 
 /*XXXXXXXXXXX
 XXXXFOOTERXXX
@@ -161,6 +199,12 @@ XXXXXXXXXXX*/
         justify-content: center;
     }
 
+    /* BANNER IMG */
+    .banner-img {
+        display: inline-block;
+    }
+
+
 }
 
 /* DESKTOP */
@@ -193,12 +237,9 @@ XXXXXXXXXXX*/
 
 
 /* Modalità Tablet (sopra i 768px)
-- Il logo nell'header si allinea a sinistra
 - Il padding del contenuto principale della pagina aumenta
-- Compare il testo "(Dolce Tradizionale)"
 - La grandezza del titolo diventa più grande
 - Le informazioni della ricetta sotto il video si dispongono a griglia
-- I bottoni social si allargano
 - compare il banner pubblicitario
 - l'immagine nella descrizione della ricetta viene circondata dal testo
 Modalità Desktop(sopra i 992px)
