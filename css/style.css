@@ -1,3 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*XXXXXXXXXXX
+XXXGENERALXXX
+XXXXXXXXXXXX*/
+
+
+/*XXXXXXXXXXX
+XXXXHEADERXXX
+XXXXXXXXXXX*/
+
+/* - Il font utilizzato per il titolo è: 'Nerko One', cursive;
+- Il font per il resto della pagina è: Montserrat, 'Helvetica Neue', sans-serif; */
+
+
+header {
+    width: 100%;
+    height: 40px;
+    color: #ff9614;
+    font-family: 'Nerko One', cursive;
+    font-size: 3rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+/*XXXXXXXXXXX
+XXXXXMAINXXXX
+XXXXXXXXXXXX*/
+
+
+
+/*XXXXXXXXXXX
+XXXXFOOTERXXX
+XXXXXXXXXXX*/
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    header {
+        justify-content: flex-start;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {}
+
+/* LARGE MOBILE */
+/* @media screen and (min-width: 576px) {} */
+
+
 /* Modalità Tablet (sopra i 768px)
 - Il logo nell'header si allinea a sinistra
 - Il padding del contenuto principale della pagina aumenta
@@ -21,8 +79,6 @@ Modalità Large Mobile (576px)
 - l'immagine nella descrizione della ricetta viene circondata dal testo anche su mobile ma solo se c'è spazio sufficiente, quindi a partire da 576px
 - I bottoni social si allagano già su dispositivi mobile più grandetti (576px)
 ## Info
-- Il font utilizzato per il titolo è: 'Nerko One', cursive;
-- Il font per il resto della pagina è: Montserrat, 'Helvetica Neue', sans-serif;
 - L'indirizzo del video YT utilizzato è https://www.youtube.com/watch?v=JVT900H6s0g
 I nomi delle icone da cercare su fontawesome sono:
 carot
