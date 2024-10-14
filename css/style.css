@@ -86,6 +86,10 @@ XXXXXXXXXXXX*/
     padding: 10px 0;
 }
 
+.video-container iframe {
+    width: 60%;
+}
+
 .description {
     padding: 2em;
     font-size: 1.2rem;
@@ -93,10 +97,6 @@ XXXXXXXXXXXX*/
 
 .description h4 {
     font-size: 1.6rem;
-}
-
-.description h4 {
-    padding: 1em 0;
 }
 
 .description li {
@@ -108,7 +108,7 @@ XXXXXICONXXXX
 XXXXXXXXXXXX*/
 
 .icon-section {
-    padding: 1em 0 3em;
+    padding: 3em 0;
     display: flex;
     justify-content: space-between;
 
@@ -131,13 +131,12 @@ XXXXBANNERXXX
 XXXXXXXXXXXX*/
 
 .banner-img {
-    background-image: url(../img/banner.png);
     height: 80px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin: 0 auto;
     display: none;
 }
+
+
 
 /*XXXXXXXXXXX
 PRESENTATION
@@ -168,6 +167,47 @@ hr {
 /*XXXXXXXXXXX
 XXXXFOOTERXXX
 XXXXXXXXXXX*/
+.footer {
+    background-color: #7c69a4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 6px;
+}
+
+.footer div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 50%;
+}
+
+.footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 8px 0;
+    row-gap: 8px;
+    width: 50%;
+}
+
+.footer-list li {
+    width: calc(100% / 4);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-list a {
+    color: #fff;
+}
+
+
+
 
 /* TABLET */
 @media screen and (min-width: 768px) {
@@ -178,8 +218,16 @@ XXXXXXXXXXX*/
     }
 
     /* SECTION */
+    .title h3 {
+        font-size: 2rem;
+    }
+
     .title h3>span {
         display: inline-block;
+    }
+
+    .description>* {
+        padding: 0.4em;
     }
 
     .description ul {
@@ -201,10 +249,22 @@ XXXXXXXXXXX*/
 
     /* BANNER IMG */
     .banner-img {
-        display: inline-block;
+        display: flex;
+
     }
 
+    .presentation div {
+        display: inline-block
+    }
 
+    .presentation div img {
+        width: 40%;
+        float: left;
+    }
+
+    .footer-list li {
+        width: calc(100% / 5);
+    }
 }
 
 /* DESKTOP */
@@ -230,76 +290,27 @@ XXXXXXXXXXX*/
         display: inline-block;
     }
 
+    /* BANNER IMG */
+    .banner-img {
+        width: 100%;
+    }
+
+    .banner-img img {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer div:first-child {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .footer-list li {
+        justify-content: flex-end;
+    }
+
 }
-
-/* LARGE MOBILE */
-/* @media screen and (min-width: 576px) {} */
-
-
-/* Modalità Tablet (sopra i 768px)
-- Il padding del contenuto principale della pagina aumenta
-- La grandezza del titolo diventa più grande
-- Le informazioni della ricetta sotto il video si dispongono a griglia
-- compare il banner pubblicitario
-- l'immagine nella descrizione della ricetta viene circondata dal testo
-Modalità Desktop(sopra i 992px)
-- La grandezza el titolo della ricetta aumenta ancora di più
-- Le informazioni della ricetta tornano a disporsi una sotto l'altra
-- Il video e le altre informazioni della ricetta si dispongono uno accanto all'altro
-- Compaiono i nomi delle piattaforme social
-- NEl footer i dati del sito e il menu di navigazione di dispongono sulla stessa linea ma su lati opposti
-:stella2: Come procedere:
-Create le macrosezioni a blocchi, facendoli funzionare in modalità responsive
-Lavorate sui dettagli blocco per blocco implementando anche il comportamento responsive.
-### Bonus
-Modalità Large Mobile (576px)
-- l'immagine nella descrizione della ricetta viene circondata dal testo anche su mobile ma solo se c'è spazio sufficiente, quindi a partire da 576px
-- I bottoni social si allagano già su dispositivi mobile più grandetti (576px)
-## Info
-- L'indirizzo del video YT utilizzato è https://www.youtube.com/watch?v=JVT900H6s0g
-I nomi delle icone da cercare su fontawesome sono:
-carot
-star
-blender
-clock
-euro-sign
-chart-pie
-utensils
-thumbtack
-+ icone dei social
-Modalità Tablet (sopra i 768px)
-- Il logo nell'header si allinea a sinistra
-- Il padding del contenuto principale della pagina aumenta
-- Compare il testo "(Dolce Tradizionale)"
-- La grandezza del titolo diventa più grande
-- Le informazioni della ricetta sotto il video si dispongono a griglia
-- I bottoni social si allargano
-- compare il banner pubblicitario
-- l'immagine nella descrizione della ricetta viene circondata dal testo
-Modalità Desktop(sopra i 992px)
-- La grandezza el titolo della ricetta aumenta ancora di più
-- Le informazioni della ricetta tornano a disporsi una sotto l'altra
-- Il video e le altre informazioni della ricetta si dispongono uno accanto all'altro
-- Compaiono i nomi delle piattaforme social
-- NEl footer i dati del sito e il menu di navigazione di dispongono sulla stessa linea ma su lati opposti
-:stella2: Come procedere:
-Create le macrosezioni a blocchi, facendoli funzionare in modalità responsive
-Lavorate sui dettagli blocco per blocco implementando anche il comportamento responsive.
-### Bonus
-Modalità Large Mobile (576px)
-- l'immagine nella descrizione della ricetta viene circondata dal testo anche su mobile ma solo se c'è spazio sufficiente, quindi a partire da 576px
-- I bottoni social si allagano già su dispositivi mobile più grandetti (576px)
-## Info
-- Il font utilizzato per il titolo è: 'Nerko One', cursive;
-- Il font per il resto della pagina è: Montserrat, 'Helvetica Neue', sans-serif;
-- L'indirizzo del video YT utilizzato è https://www.youtube.com/watch?v=JVT900H6s0g
-I nomi delle icone da cercare su fontawesome sono:
-carot
-star
-blender
-clock
-euro-sign
-chart-pie
-utensils
-thumbtack
-+ icone dei social */
